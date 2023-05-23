@@ -13,6 +13,7 @@
 
 
 
+
 // // Grade point 
 // let marks=105;
 
@@ -63,6 +64,7 @@
 
 
 
+
 // // prime number
 
 // let number=2;
@@ -87,6 +89,7 @@
 
 
 
+
 // swap or swaping
 
 // let x=10;
@@ -97,7 +100,9 @@
 // x=y;
 // y=temp;
 
-// console.log("x=" +x+" y="+y)
+// console.log("x=" +x+ " y="+y)
+
+
 
 
 
@@ -113,7 +118,6 @@ for (let i=3; i<=8; i++){
     console.log(sum);
     n1=n2;
     n2=sum;
-
 }
 
 
