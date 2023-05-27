@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        input{
+            margin: 5px 5px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <label>Name</label>
+    <input type="text" id="name">
+    <input type="button" value="ok" id="btnOk" onclick="namePrint()">
+    <br>
+    <p id="Show Text"></p>
+
+
+    <script>    
+        // let btnOk=document.getElementById('btnOk');
+
+        function namePrint(){
+            let name=document.getElementById('name').value;
+            document.getElementById('Show Text').innerHTML="welcome "+name;
+        }
+    </script>
+
+
+
+
+
+    <!-- <label>Name</label>
+    <input type="text" id="name" oninput="namevalidation()">
+    <p id="namevalidation" style="color: blueviolet; font-weight: 300%;" ></p>
+
+    <input type="button" value="ok" id="btnOk" onclick="namePrint()" style="background-color: aqua;">
+    <br>
+    <p id="Show Text"></p>
+
+
+    <script> 
+    
+        function namePrint(){
+            let name=document.getElementById('name').value;
+            document.getElementById('Show Text').innerHTML="welcome "+name;
+        }
+        
+        function namevalidation(){
+            let name = document.getElementById('name').value;
+            let btnOk = document.getElementById('btnOk');
+
+            if(name.length>=3 && name.length<=10){
+                document.getElementById('namevalidation').innerHTML='Good';
+                document.getElementById('namevalidation').style.color='Green';
+                document.getElementById('btnOk').style.visibility='visible';
+            }
+            else{
+                document.getElementById('namevalidation').innerHTML='name must be 3 to 10';
+                document.getElementById('namevalidation').style.color='Red';
+                document.getElementById('btnOk').style.visibility='Hidden';
+            }           
+        }
+    </script> -->
+
+
+</body>
+</html>
