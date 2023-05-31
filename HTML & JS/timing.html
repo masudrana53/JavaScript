@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timing Medthos</title>
+</head>
+<body>
+
+    <table cellpadding="0" cellspacing="0" border="0" width="100%" height="100%" align="center">
+        <tr valign="Middle">
+            <td align="center">
+                <img src="Javacup.jpg" alt="java" name="cup" width="64" height="38">                
+                <a href="#" onClick="interval()">Interval</a>
+                &nbsp;&nbsp;&nbsp;&nbsp;               
+                <a href="#" onClick="timeOut()">Time Out</a> </p>   
+                 
+            </td>
+        </tr>
+    </table>
+
+
+    <script lang="JavaScript">
+        let cupUp=new Image();
+        cupUp.scr="Javacup.jpg";
+        let cupDown=new Image();
+        cupDown.src="hidejava.png";
+        let alpha; //This variable needs to be global
+
+        function interval(){
+            alpha=window.setInterval("document.cup.src=cupDown.src",1000);
+        }
+
+        function timeOut(){
+            window=setTimeout("document.cup.src=cupUp.src",1000);
+            window.clearInterval(alpha); 
+        }
+    </script>
+    
+</body>
+</html>
