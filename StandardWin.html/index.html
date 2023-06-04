@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Window Control</title>
+</head>
+
+<body bgcolor="white">
+    <center><p>
+        <h2>Window Control</h2>
+    
+        <form action="">
+            <input type="button" name="openBut" value="Click to Open New Window" onclick="GetStanWin()"><p>
+            <input type="button" name="mvbyBut" value="Click to move relative." onclick="moveRel()"><p>
+            <input type="button" name="movtoBut" value="Click to move absolute." onclic="moveAbs()"><p>
+            <input type="button" name="shrinkBut" value="Click to change relative size." onclick="shrink()"><p>
+            <input type="button" name="shrivelBut" value="Click to change absolute size." onclick="shrivel()"><p>            
+        </form>       
+    </center>   
+    
+
+    
+    <script lang="JavaScrip">
+        function GetStanWin(){
+            open("sampWin.html","sampWin1","toolbar=no,width=200,height=150")
+            //width=640,height=460 recommended design size
+        }
+
+        function moveRel(){
+            moveBy(20,20);
+        }
+
+        function moveAbs(){
+            moveTo(20,20);
+        }
+
+        function shrink(){
+            resizeBy(15,10);
+        }
+
+        function shrivel(){
+            resizeTo(400,300);
+        }
+    </script>
+</body>
+</html>

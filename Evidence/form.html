@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <pre>
+    <form action="form_result.html">
+      <label for="name">Name</label> 
+      <input type="name" name="" id="name"><br>
+      <label for="email">Email</label>
+      <input type="email" name="" id="email"><br>
+      <label for="password">Password</label>
+      <input type="text" name="" id="password"><br>
+      
+      <label for="">Gender:</label><br>
+      <input type="radio" name="gender" id=""><label for="male">Male</label>
+      <input type="radio" name="gender" id=""><label for="female">Female</label>
+
+      <input type="submit" value="submit" onclick="dataTransfer()">
+    </form>
+    </pre>
+
+    <script>
+
+        function dataTransfer(){
+
+        const name=document.getElementById("name").value;
+        const email=document.getElementById("email").value;
+        const password=document.getElementById("password").value;
+
+        localStorage.setItem("st_name",name);
+        localStorage.setItem("st_email",email);
+        localStorage.setItem("st_password",password);
+    }
+
+    </script>
+
+    <!-- Form Result
+
+    <label id="name">Email</label>
+    <label id="email">Email</label>
+    <label id="password">Password</label>
+
+    <script>
+        document.getElementById("name").innerHTML=localStorage.setItem("st_name");
+        document.getElementById("email").innerHTML=localStorage.setItem("st_email");
+        document.getElementById("password").innerHTML=localStorage.setItem("st_password");
+        
+    </script> -->
+</body>
+</html>
