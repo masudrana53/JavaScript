@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+
+<body>
+
+    <!-- <label for="">N-1</label><br>
+    <input type="text" name="" id="n1"><br>
+    <label for="">N-2</label><br>
+    <input type="text" name="" id="n2"><br>
+    <label for="">N-3</label><br>
+    <input type="text" name="" id="n3">
+    <br>
+    <button onclick="findmaxnumber()">Maximum</button>
+    <button onclick="findminnumber()">Minimum</button> 
+    <br>
+    <span id="result"></span>   -->
+
+<!-- <script>
+    function findmaxnumber(){
+        let n1=document.getElementById("n1").value;
+        let n2=document.getElementById("n2").value;
+        let n3=document.getElementById("n3").value;
+        let result=0;
+
+        if(n3>n2 && n3>n1){
+            document.getElementById('result').innerHTML="Max number is "+n3;
+        }
+        else if (n2>n3 && n2>n1){ 
+            document.getElementById('result').innerHTML="Max number is "+n2;
+        }
+        else{
+            document.getElementById('result').innerHTML="Max number is "+n1;
+        }
+    }
+
+    function findminnumber(){
+        let n1=document.getElementById("n1").value;
+        let n2=document.getElementById("n2").value;
+        let n3=document.getElementById("n3").value;
+        let result=0;
+
+        if(n1<n2 && n1<n3){
+            document.getElementById('result').innerHTML="Min number is "+n1;
+        }
+        else if(n2<n1 && n2<n3){
+            document.getElementById('result').innerHTML="Min number is "+n2;
+        }
+        else{
+            document.getElementById('result').innerHTML="Min number is "+n3;
+        }
+    }
+</script>     -->
+
+
+
+
+
+<!-- Way of alerting -->
+
+<script>
+    let number01= prompt("First Number");
+    let number02= prompt("Second Number");
+    let number03= prompt("Third Number");
+    let min=0;
+    let max=0;
+
+    if(number01> number02 && number01> number03){
+        max=number01;
+    }
+    else if(number02> number01 && number02> number03){
+        max=number02;
+    }
+    else{
+        max=number03;
+    }
+
+
+    if(number01< number02 && number01< number03){
+        min=number01;
+    }
+    else if(number02< number01 && number02< number03){
+        min=number02;
+    }
+    else{
+        min=number03;
+    }
+
+    alert("Max number is "+max+" Min number is "+min);
+
+</script>
+
+
+
+</body>
+</html>
