@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .container{
+            width: 30%;
+            margin: 20px auto;
+            box-shadow: 1px 1px 10px 1px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+    <b> form result data </b>
+    <pre>
+    <b> Name </b>
+    <span id="name"></span>
+    <b> Email </b>
+    <span id="email"></span>
+    <b> Password </b>
+    <span id="password"></span>
+    <b> Gender </b>
+    <span id="gender"></span>
+    <b> Subject </b>
+    <span id="subject"></span>
+    Hobby
+    <span id="hobby"></span>
+    About
+    <p id="about"></p>
+    </pre>
+    </div>
+
+
+    <script> 
+        document.getElementById("name").innerHTML=localStorage.getItem("s_name");
+        document.getElementById("email").innerHTML=localStorage.getItem("s_email");
+        document.getElementById("password").innerHTML=localStorage.getItem("s_password");
+        document.getElementById("gender").innerHTML=localStorage.getItem("s_gender");
+        document.getElementById("subject").innerHTML=localStorage.getItem("s_subject");
+        document.getElementById("hobby").innerHTML=localStorage.getItem("s_hobby");
+        document.getElementById("about").innerHTML=localStorage.getItem("s_about");
+    </script>
+    
+</body>
+</html>

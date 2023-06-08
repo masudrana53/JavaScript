@@ -69,6 +69,8 @@
             const name=document.getElementById("name").value;
             const email=document.getElementById("email").value;
             const password=document.getElementById("password").value;
+            const about=document.getElementById("about").value;
+            
 
             
             let gender;
@@ -93,7 +95,7 @@
 
             //ho=["gardening","Playing", "Swimming"];
 
-            for (let i = 0; i < ho.length; i++) {
+            for (let i = 0; i < ho.length; i++){
                 hobby.push(ho[i].value);
             }
             let s_hobby = hobby.toString();
@@ -104,7 +106,7 @@
             localStorage.setItem("s_password",password);
             localStorage.setItem("s_gender",gender);
             localStorage.setItem("s_subject",subject);
-            localStorage.setItem("s_hobby", hobby);
+            localStorage.setItem("s_hobby", s_hobby);
             localStorage.setItem("s_about", about);
         }
 
