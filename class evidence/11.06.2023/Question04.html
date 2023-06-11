@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+
+<body>
+
+<script>
+    let number01= prompt("First Number");
+    let number02= prompt("Second Number");
+    let number03= prompt("Third Number");
+    let min=0;
+    let max=0;
+
+    if(number01> number02 && number01> number03){
+        max=number01;
+    }
+    else if(number02> number01 && number02> number03){
+        max=number02;
+    }
+    else{
+        max=number03;
+    }
+
+
+    if(number01< number02 && number01< number03){
+        min=number01;
+    }
+    else if(number02< number01 && number02< number03){
+        min=number02;
+    }
+    else{
+        min=number03;
+    }
+
+    alert("Max number is "+max+" Min number is "+min);
+
+</script>
+
+
+
+</body>
+</html>

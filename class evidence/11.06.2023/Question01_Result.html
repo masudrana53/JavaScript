@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <b> form result data </b>
+    <pre>
+    <b> Name </b>
+    <span id="name"></span>
+    <b> Email </b>
+    <span id="email"></span>
+    <b> Remarks </b>
+    <span id="remarks"></span> 
+    <b> Sex </b>
+    <span id="gender"></span>
+    <b> Location </b>
+    <span id="location"></span>
+    </pre>
+    
+
+    <script>
+        document.getElementById("name").innerHTML=localStorage.getItem("name");
+        document.getElementById("email").innerHTML=localStorage.getItem("email");
+        document.getElementById("remarks").innerHTML=localStorage.getItem("remarks");
+        document.getElementById("gender").innerHTML=localStorage.getItem("gender");
+        document.getElementById("location").innerHTML=localStorage.getItem("location");
+        
+    </script>
+</body>
+</html>

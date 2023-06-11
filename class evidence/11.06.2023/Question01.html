@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="Question01_Result.html">
+
+    <label for="">Name</label> <p>
+    <input type="text" name="" id="name"> <p>
+
+    <label for="">Email</label> <p>
+    <input type="text" name="" id="email"> <p>
+
+    <label for="">Remarks:</label> <p>
+    <textarea name="" id="remarks" cols="30" rows="10"></textarea> <p>
+
+    <label for="">Sex:</label>
+    <input type="radio" name="gender" id="male" checked> <label for="">Male</label>
+    <input type="radio" name="gender" id="female"> <label for="">Female</label> <p>
+    
+    <label for="">Courses:</label>
+    <input type="checkbox" name="" id="nt"> <label for="">NT</label> 
+    <input type="checkbox" name="" id="iad"> <label for="">IAD</label> 
+    <input type="checkbox" name="" id="ddd"> <label for="">DDD</label> 
+    <input type="checkbox" name="" id="esad"> <label for="">ESAD</label> <p>
+        
+
+    <label for="">Location:</label>
+    <select name="" id="location">
+        <option value="">--Select One--</option>
+        <option value="">Banani</option>
+        <option value="">Dhanmondhi</option>
+        <option value="">Mirpur</option>
+    </select> <p>
+        <input type="submit" value="submit" onClick="dataTransfer()" class="button"> <input type="reset" value="reset">
+    </form>  
+    
+    <script>
+        function dataTransfer(){
+
+        const name=document.getElementById("name").value;
+        const email=document.getElementById("email").value;
+        const remarks=document.getElementById("remarks").value;
+
+
+        let gender;
+
+            if(document.getElementById("male").checked==true){
+                gender="Male"; 
+            }
+            else if(document.getElementById("female").checked==true){
+                gender="Female";
+            }
+
+            let sub=document.getElementById("Courses");
+            let subject=sub.options[sub.selectedIndex].text;
+            
+            localStorage.setItem("name",name);
+            localStorage.setItem("email",name);
+            localStorage.setItem("remarks",remarks);
+            localStorage.setItem("location",location);
+            localStorage.setItem("gender",gender);
+        }
+
+    </script>
+</body>
+</html>
