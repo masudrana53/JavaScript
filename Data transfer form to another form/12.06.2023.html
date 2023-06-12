@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <pre>
+        <form id="form">
+            <label for="">Name:</label> <input type="text" id="name">
+            <label for="">Remarks:</label>
+            <textarea name="" id="remarks" cols="30" rows="10"></textarea>
+
+            <label for="">Gender:</label>
+            <input type="radio" name="gender" value="Male"> <label for="gender">Male</label>
+            <input type="radio" name="gender" value="Female"> <label for="gender">Female</label>
+
+            <label for="">Hobby:</label>
+            <input type="checkbox" value="travelling">Travelling
+            <input type="checkbox" value="writing">Writing
+            <input type="checkbox" value="reading">Reading
+
+            <label for="subject">Subject:</label>
+            <select name="" id="subject">
+                <option value="jee">JEE</option>
+                <option value="html">HTML</option>
+                <option value="css">CSS</option>
+            </select>
+
+            <input type="submit" value="Submit">
+        </form>
+    </pre>
+
+
+    <script>
+        function dataTransfer(event){
+            event.preventDefult();
+
+        const name=document.getElementById("name").value;
+        const remarks=document.getElementById("remarks").value;
+        const subject=document.getElementById("subject").value;
+        const gender=document.querySelector('input[type=radio]:checked').value;
+        const hob=document.querySelectorAll('input[type=checkbox]:checked');
+        let hobby=[];
+
+        hob.forEach(function(hob){
+            hobby.push(hob.value);
+        });
+        
+        let output = "Name: " + name + "<br>";
+            output += "Remarks: " + remarks + "<br>";
+            output += "Subject: " + subject + "<br>";
+            output += "Gender: " + gender + "<br>";
+            output += "Hobby: " + hobby.join(',') + "<br>";
+
+        let newWindow=window.open('','_blank');
+        newWindow.document.write('<pre>' + output + '<pre>');
+        }
+
+        let form=document.getElementById('form');
+        form.addEventListener('submit',dataTransfer);
+
+    </script>
+
+</body>
+</html>

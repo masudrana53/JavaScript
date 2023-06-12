@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
 
 <body>
+
     <form id="idb" >
         <label>Name</label>
         <input type="text" id="name"><br>
@@ -41,38 +41,39 @@
     </form>
 
     <script>
-        function dataTransfer(event) {
-           event.preventDefault();
+        function dataTransfer(event){
+            event.preventDefault();
 
-            const name = document.getElementById("name").value;
-            const contact = document.getElementById("contact").value;
-            const reamrks = document.getElementById("remarks").value;
-            const location = document.getElementById("location").value;
-            const gender = document.querySelector('input[type=radio]:checked').value;
-            const sub=document.querySelectorAll('input[type=checkbox]:checked');
-            let subject=[];
+        const name=document.getElementById("name").value;
+        const contact=document.getElementById("contact").value;
+        const remarks=document.getElementById("remarks").value;
+        const location=document.getElementById("location").value;
+        const gender=document.querySelector('input[type=radio]:checked').value;
+        const sub=document.querySelectorAll('input[type=checkbox]:checked');
+        let subject=[];
 
-            sub.forEach(function(sub){
-                subject.push(sub.value);
-            });
+        sub.forEach(function(sub){
+            subject.push(sub.value);
+        });
 
-
-          var  output = "Name: " + name + "<br>";            
-            output += "Contact: " + contact + "<br>";
-            output += "Remarks: " + reamrks + "<br>";
-            output += "Gender: " + gender + "<br>";
-            output += "Subject: " + subject.join(", ")  + "<br>";
+        
+       var  output = "name: " + name + "<br>";
+            output += "contact: " + contact + "<br>";
+            output += "remarks: " + remarks + "<br>";
+            output += "gender: " + gender + "<br>";
+            output += "subject: " + subject.join(',') + "<br>";
             output += "location: " + location + "<br>";
 
-            
-            var newWindow = window.open('', '_blank');
-            newWindow.document.write('<pre>' + output + '</pre>');
-        }
+       let newWindow = window.open('','_blank');
+       newWindow.document.write('<pre>' + output + '<pre>');
+      
+       }
 
-        let form = document.getElementById('idb');
-        form.addEventListener('submit', dataTransfer);
-
+       let form = document.getElementById('idb');
+       form.addEventListener('submit', dataTransfer);
     </script>
-</body>
 
+
+
+</body>
 </html>
