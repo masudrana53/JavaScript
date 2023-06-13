@@ -1,0 +1,100 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    #container{
+        padding: 20px 0px;
+        margin: 20px auto;
+        width: 30%;
+        box-shadow: 1px 1px 10px 1px;
+
+    
+    }
+    h3{
+        text-align: center;
+    }
+</style>
+
+<body>
+    <div id="container">
+        <h3>This is a form</h3>
+    <form id="idb" >
+        
+        <pre>
+        <label>Name:</label>
+        <input type="text" id="name">
+
+        <label>Contact:</label>
+        <input type="text" id="contact">
+
+        <label for="">Remarks:</label>
+        <textarea name="" id="remarks" cols="30" rows="5"></textarea>
+
+        <label for="">Sex:</label>
+        <input type="radio"  name="gender" value="Male">Male
+        <input type="radio"  name="gender" value="Female">Female 
+
+        <label for="">Courses:</label>
+        <input type="checkbox" value="NT">NT
+        <input type="checkbox"  value="AID">AID
+        <input type="checkbox" value="DDD">DDD
+        <input type="checkbox" value="ESAD">ESAD
+
+        <label for="">Location:</label>
+        <select name="location" id="location">
+            <option value="none">--Select One--</option>
+            <option value="BANANI">BANANI</option>
+            <option value="DHANMONDHI">DHANMONDHI</option>
+            <option value="MIRPUR">MIRPUR</option>
+        </select>
+        
+        <input type="submit" value="Submit" style="background-color: rgb(36, 36, 67); color: aliceblue;">
+    </pre>
+    </form>
+    </div>
+
+    <script>
+        function dataTransfer(event) {
+           event.preventDefault();
+
+            const name = document.getElementById("name").value;
+            const contact = document.getElementById("contact").value;
+            const remarks = document.getElementById("remarks").value;
+            const location = document.getElementById("location").value;
+            const gender = document.querySelector('input[type=radio]:checked').value;
+            const cours = document.querySelectorAll('input[type=checkbox]:checked');
+            let courses=[];
+
+            cours.forEach(function(cours){
+                courses.push(cours.value);
+            });
+
+
+          var  output = "Name: " + name + "<br>";            
+            output += "Contact: " + contact + "<br>";
+            output += "Remarks: " + remarks + "<br>";
+            output += "Gender: " + gender + "<br>";
+            output += "Hobby: " + courses.join(", ")  + "<br>";
+            output += "Location: " + location + "<br>";
+
+            
+            var newWindow = window.open('', '_blank');
+            newWindow.document.write('<pre>' + output + '<pre>');
+        }
+
+        let form = document.getElementById('idb');
+        form.addEventListener('submit', dataTransfer);
+
+    </script>
+</body>
+
+</html>

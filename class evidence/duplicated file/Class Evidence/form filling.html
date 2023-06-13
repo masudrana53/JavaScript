@@ -1,0 +1,93 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    #container{
+        padding: 20px 0;
+        margin: 20px auto;
+        width: 30%;
+        box-shadow: 1px 1px 10px 1px;
+    
+    }
+</style>
+
+<body>
+    <div id="container">
+    <form id="idb" >
+        <pre>
+        <label>Name</label>
+        <input type="text" id="name">
+
+        <label>Contact</label>
+        <input type="text" id="contact">
+
+        <label for="">Remarks</label>
+        <textarea name="" id="remarks" cols="30" rows="5"></textarea>
+
+        <label for="">Gender</label>
+        <input type="radio"  name="gender" value="Male">Male
+        <input type="radio"  name="gender" value="Female">Female 
+
+        <label for="">Hobby</label>
+        <input type="checkbox" value="Travelling">Travelling
+        <input type="checkbox"  value="Writting">Writting
+        <input type="checkbox" value="Reading">Reading
+
+        <label for="">Subject</label>
+        <select name="subject" id="subject">
+            <option value="none">--select one--</option>
+            <option value="JEE">JEE</option>
+            <option value="PHP">PHP</option>
+            <option value="GAVE">GAVE</option>
+        </select>
+        <br>
+        <input type="submit" value="Submit"> <input type="reset" value="Reset">
+    </pre>
+    </form>
+    </div>
+
+    <script>
+        function dataTransfer(event) {
+           event.preventDefault();
+
+            const name = document.getElementById("name").value;
+            const contact = document.getElementById("contact").value;
+            const remarks = document.getElementById("remarks").value;
+            const subject = document.getElementById("subject").value;
+            const gender = document.querySelector('input[type=radio]:checked').value;
+            const hoby = document.querySelectorAll('input[type=checkbox]:checked');
+            let hobby=[];
+
+            hoby.forEach(function(hoby){
+                hobby.push(hoby.value);
+            });
+
+
+          var  output = "Name: " + name + "<br>";            
+            output += "Contact: " + contact + "<br>";
+            output += "Remarks: " + remarks + "<br>";
+            output += "Gender: " + gender + "<br>";
+            output += "Hobby: " + hobby.join(", ")  + "<br>";
+            output += "Location: " + subject + "<br>";
+
+            
+            var newWindow = window.open('', '_blank');
+            newWindow.document.write('<pre>' + output + '<pre>');
+        }
+
+        let form = document.getElementById('idb');
+        form.addEventListener('submit', dataTransfer);
+
+    </script>
+</body>
+
+</html>
